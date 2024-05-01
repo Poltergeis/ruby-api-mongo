@@ -10,7 +10,6 @@ class AddPersonaController
 
   def launch(args)
     begin
-      puts "se acabo la diversion, esto es args aqui: #{args.to_json}"
       persona = @addPersonaUseCase.go(args)
       return { success: true, persona: persona }.to_json
     rescue => error
